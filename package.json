@@ -1,0 +1,33 @@
+{
+  "name": "voleyball-client",
+  "private": true,
+  "scripts": {
+    "start": "react-scripts start"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.2.9",
+    "graphql": "^15.4.0",
+    "node-sass": "^4.14.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "react-scripts": "^4.0.1"
+  },
+  "version": "1.0.0",
+  "author": "Adam Malej",
+  "license": "ISC",
+  "description": "",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
