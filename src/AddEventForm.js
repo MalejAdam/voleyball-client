@@ -2,7 +2,7 @@ import React from 'react';
 import { InputDate } from './components/InputDate';
 import { useForm } from 'react-hook-form';
 import { InputWithLabel } from './components/InputWithLabel';
-import { levels } from './constants/level';
+import { levels, groups } from './constants/level';
 import './AddEventForm.scss';
 
 export const AddEventForm = () => {
@@ -45,6 +45,20 @@ export const AddEventForm = () => {
                 <InputDate inputName="date" ref={register} />
                 <div className="col-1"></div>
                 <div className="col-2 label-col">
+                  <label>Godzina: </label>
+                </div>
+                <div className="col">
+                  <input name="time" type="time" ref={register} required />
+                </div>
+              </div>
+            </div>
+            <div className="col-2"></div>
+          </div>
+          <div className="row">
+            <div className="col-2"></div>
+            <div className="col">
+              <div className="row">
+                <div className="col-2 label-col">
                   <label>Poziom gry: </label>
                 </div>
                 <div className="col">
@@ -58,21 +72,6 @@ export const AddEventForm = () => {
                     })}
                   </select>
                 </div>
-              </div>
-            </div>
-            <div className="col-2"></div>
-          </div>
-          <div className="row">
-            <div className="col-2"></div>
-            <div className="col">
-              <div className="row">
-                <div className="col-2 label-col">
-                  <label>Godzina: </label>
-                </div>
-                <div className="col">
-                  <input name="time" type="time" ref={register} required />
-                </div>
-
                 <div className="col-3 label-col">
                   <label>Ile potrzebujesz osób?: </label>
                 </div>
@@ -111,6 +110,31 @@ export const AddEventForm = () => {
                 </div>
                 <div className="col">
                   <input name="duration" type="time" ref={register} />
+                </div>
+              </div>
+            </div>
+            <div className="col-2"></div>
+          </div>
+          <div className="row">
+            <div className="col-2"></div>
+            <div className="col">
+              <div className="row">
+                <div className="col-2 label-col"></div>
+                <div className="col"></div>
+                <div className="col-1"></div>
+                <div className="col-2 label-col">
+                  <label>Grupa: </label>
+                </div>
+                <div className="col">
+                  <select name="group" ref={register}>
+                    {groups.map((group, index) => {
+                      return (
+                        <option key={group} value={index}>
+                          {group}
+                        </option>
+                      );
+                    })}
+                  </select>
                 </div>
               </div>
             </div>
