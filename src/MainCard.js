@@ -1,5 +1,5 @@
 import React from 'react';
-import { Registration } from './Registration';
+import { Event } from './Event';
 import { AddEventForm } from './AddEventForm';
 import { days, months } from './constants/date';
 import './MainCard.scss';
@@ -30,7 +30,9 @@ export const MainCard = () => {
       <div className="row">
         <AddEventForm />
       </div>
-      <div className="row">{/* <Registration /> */}</div>
+      <div className="row">
+        <Event />
+      </div>
     </div>
   );
 };

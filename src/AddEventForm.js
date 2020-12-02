@@ -2,14 +2,23 @@ import React from 'react';
 import { InputDate } from './components/InputDate';
 import { useForm } from 'react-hook-form';
 import { InputWithLabel } from './components/InputWithLabel';
+import { addEventMutation } from './graphql/mutations';
+import { getEventsQueries } from './graphql/queries';
 import { levels, groups } from './constants/level';
 import './AddEventForm.scss';
+import { from, useMutation } from '@apollo/client';
 
 export const AddEventForm = () => {
   const { register, handleSubmit, reset } = useForm();
+  const [addEvent] = useMutation(addEventMutation, {
+    refetchQueries: [{ query: getEventsQueries }],
+  });
 
   const onSubmit = (data) => {
-    console.log(JSON.stringify(data));
+    const event = validEvent(data);
+    console.log(event);
+
+    addEvent({ variables: { input: event } });
     reset();
   };
 
@@ -164,4 +173,18 @@ export const AddEventForm = () => {
       </div>
     </>
   );
+};
+
+const validEvent = (data) => {
+  return {
+    address: data.address,
+    date: data.date,
+    time: data.time,
+    level: parseInt(data.level),
+    numberOfPerson: parseInt(data.numberOfPerson),
+    costPerPerson: parseInt(data.costPerPerson),
+    duration: data.duration,
+    additionalComment: data.additionalComment,
+    group: parseInt(data.group),
+  };
 };

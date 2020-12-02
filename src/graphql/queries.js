@@ -7,6 +7,7 @@ export const getEventsQueries = gql`
       address
       date
       time
+      numberOfPerson
     }
   }
 `;
