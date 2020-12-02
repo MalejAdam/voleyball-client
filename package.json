@@ -8,6 +8,7 @@
     "@apollo/client": "^3.2.9",
     "express": "^4.17.1",
     "graphql": "^15.4.0",
+    "graphql-tag": "^2.11.0",
     "node-sass": "^4.14.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
