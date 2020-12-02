@@ -11,9 +11,6 @@ export const App = () => {
       <div className="app-container">
         <Header />
         <MainCard />
-        <div>
-          <div>Siatkówka dla amatorów</div>
-        </div>
       </div>
     </ApolloProvider>
   );

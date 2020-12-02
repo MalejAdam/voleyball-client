@@ -1,5 +1,6 @@
 import React from 'react';
 import { Registration } from './Registration';
+import { AddEventForm } from './AddEventForm';
 import { days, months } from './constants/date';
 import './MainCard.scss';
 
@@ -21,13 +22,15 @@ export const MainCard = () => {
   return (
     <div className="container main-card">
       <div className="row">
-        <h1>
+        <div className="col-2"></div>
+        <h1 className="date-header">
           Dziś jest: {getDayName().toLowerCase()}, {getFullDate().toLowerCase()}{' '}
         </h1>
       </div>
       <div className="row">
-        <Registration />
+        <AddEventForm />
       </div>
+      <div className="row">{/* <Registration /> */}</div>
     </div>
   );
 };

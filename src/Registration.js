@@ -6,9 +6,16 @@ export const Registration = () => {
   return (
     <>
       <h3>Zapisy</h3>
-      <InputWithLabel inputName="name" textLabel="Imię" />
-      <InputWithLabel inputName="surname" textLabel="Nazwisko" />
-      <InputWithLabel inputName="email" textLabel="Email" />
+      <div className="col-12">
+        <InputWithLabel
+          inputName="name"
+          textLabel="Imię lub ksywka"
+          placeholder="Jan, Kondzio..."
+        />
+      </div>
+      <div className="col-12">
+        <InputWithLabel inputName="email" textLabel="Email" />
+      </div>
     </>
   );
 };

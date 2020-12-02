@@ -2,19 +2,22 @@ import React from 'react';
 import { Input } from './Input';
 import './InputWithLabel.scss';
 
-export const InputWithLabel = ({ inputName, textLabel, placeholder }) => {
-  return (
-    <>
-      <div className="col-12">
-        <div className="row">
-          <div className="col-2 input-col">
-            <label>{textLabel}: </label>
-          </div>
-          <div className="col">
-            <Input name={inputName} placeholder={placeholder} />
-          </div>
+export const InputWithLabel = React.forwardRef(
+  ({ inputName, textLabel, placeholder, isRequired }, ref) => {
+    return (
+      <>
+        <div className="col-2 label-col">
+          <label>{textLabel}: </label>
         </div>
-      </div>
-    </>
-  );
-};
+        <div className="col">
+          <Input
+            name={inputName}
+            placeholder={placeholder}
+            ref={ref}
+            isRequired={isRequired}
+          />
+        </div>
+      </>
+    );
+  }
+);
