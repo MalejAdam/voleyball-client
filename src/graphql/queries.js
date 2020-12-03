@@ -8,6 +8,7 @@ export const getEventsQueries = gql`
       date
       time
       numberOfPerson
+      costPerPerson
     }
   }
 `;

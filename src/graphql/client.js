@@ -5,7 +5,7 @@ import {
   InMemoryCache,
 } from '@apollo/client';
 
-const httpUrl = 'https://voleyball-server-adam-malej.herokuapp.com/graphql';
+const httpUrl = 'http://localhost:9000/graphql';
 const httpLink = ApolloLink.from([new HttpLink({ uri: httpUrl })]);
 
 const client = new ApolloClient({

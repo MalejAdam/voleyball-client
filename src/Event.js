@@ -1,23 +1,32 @@
 import React from 'react';
-import { useQuery } from '@apollo/client';
-import { getEventsQueries } from './graphql/queries';
+import { useForm } from 'react-hook-form';
+import './Event.scss';
 
-export const Event = () => {
-  const { loading, error, data } = useQuery(getEventsQueries);
-  if (loading) return 'Loading...';
-  if (error) return `Error! ${error.message}`;
-  const events = data.events;
-  eventsMap(events);
+export const Event = ({ event }) => {
+  const { register, handleSubmit, reset } = useForm();
 
   return (
-    <div>
-      {events.map((event) => {
-        return <div key={event.id}>{event.address}</div>;
-      })}
+    <div
+      className="col-10 event"
+      style={{ marginBottom: '20px', backgroundColor: 'white' }}
+    >
+      <div className="row">
+        <div className="col-6">Data wydarzenia: {event.date}</div>
+        <div className="col-6 cost">Koszt: {event.costPerPerson}</div>
+        <div className="col-6">Gdzie gramy?: {event.address}</div>
+      </div>
+      <form>
+        <div className="row submit-row">
+          <div className="col-3">
+            <input type="button" value="Zapisz się" onClick={onsubmit}></input>
+          </div>
+        </div>
+      </form>
     </div>
   );
 };
 
-const eventsMap = (events) => {
-  console.log(events);
+const onsubmit = () => {
+  alert('Cześć! Przycisk jest w trakcie prac ;)');
+  return false;
 };
