@@ -16,7 +16,6 @@ export const AddEventForm = () => {
 
   const onSubmit = (data) => {
     const event = validEvent(data);
-    console.log(event);
 
     addEvent({ variables: { input: event } });
     reset();
