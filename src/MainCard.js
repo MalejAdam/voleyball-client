@@ -24,10 +24,14 @@ export const MainCard = () => {
       <div className="container main-card">
         <div className="row">
           <div className="col-2"></div>
-          <h1 className="date-header">
-            Dziś jest: {getDayName().toLowerCase()},{' '}
-            {getFullDate().toLowerCase()}{' '}
-          </h1>
+          <div className="col date-column">
+            <h1 className="date-header">
+              Dziś jest: {getDayName().toLowerCase()},{' '}
+              {getFullDate().toLowerCase()}{' '}
+            </h1>
+          </div>
+
+          <div className="col-2"></div>
         </div>
         <div className="row">
           <AddEventForm />

@@ -50,13 +50,63 @@ export const AddEventForm = () => {
             <div className="col-2"></div>
             <div className="col">
               <div className="row">
-                <InputDate inputName="date" ref={register} />
-                <div className="col-1"></div>
-                <div className="col-2 label-col">
-                  <label>Godzina: </label>
+                <div className="col-12">
+                  <div className="row">
+                    <InputDate inputName="date" ref={register} />
+                  </div>
                 </div>
                 <div className="col">
-                  <input name="time" type="time" ref={register} required />
+                  <div className="row">
+                    <div className="col label-col">
+                      <label>Godzina: </label>
+                    </div>
+                    <div className="col-8">
+                      <input name="time" type="time" ref={register} required />
+                    </div>
+                  </div>
+                </div>
+                {/* <div className="col-1 empty-div"></div> */}
+              </div>
+            </div>
+            <div className="col-2"></div>
+          </div>
+          <div className="row">
+            <div className="col-2"></div>
+            <div className="col">
+              <div className="row">
+                <div className="col-12">
+                  <div className="row">
+                    <div className="col-4 label-col">
+                      <label>Poziom gry: </label>
+                    </div>
+                    <div className="col">
+                      <select name="level" ref={register}>
+                        {levels.map((level, index) => {
+                          return (
+                            <option key={level} value={index}>
+                              {level}
+                            </option>
+                          );
+                        })}
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div className="col">
+                  <div className="row">
+                    <div className="col-6 label-col">
+                      <label>Ile potrzebujesz osób?: </label>
+                    </div>
+                    <div className="col">
+                      <input
+                        type="number"
+                        ref={register}
+                        name="numberOfPerson"
+                        min="1"
+                        max="11"
+                      ></input>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -66,31 +116,31 @@ export const AddEventForm = () => {
             <div className="col-2"></div>
             <div className="col">
               <div className="row">
-                <div className="col-2 label-col">
-                  <label>Poziom gry: </label>
+                <div className="col-12">
+                  <div className="row">
+                    <div className="col-4 label-col">
+                      <label>Koszt na osobę: </label>
+                    </div>
+                    <div className="col">
+                      <input
+                        type="number"
+                        ref={register}
+                        name="costPerPerson"
+                        min="0"
+                        max="50"
+                      ></input>
+                    </div>
+                  </div>
                 </div>
                 <div className="col">
-                  <select name="level" ref={register}>
-                    {levels.map((level, index) => {
-                      return (
-                        <option key={level} value={index}>
-                          {level}
-                        </option>
-                      );
-                    })}
-                  </select>
-                </div>
-                <div className="col-3 label-col">
-                  <label>Ile potrzebujesz osób?: </label>
-                </div>
-                <div className="col">
-                  <input
-                    type="number"
-                    ref={register}
-                    name="numberOfPerson"
-                    min="1"
-                    max="11"
-                  ></input>
+                  <div className="row">
+                    <div className="col-4 label-col">
+                      <label>Czas trwania: </label>
+                    </div>
+                    <div className="col">
+                      <input name="duration" type="time" ref={register} />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -100,37 +150,7 @@ export const AddEventForm = () => {
             <div className="col-2"></div>
             <div className="col">
               <div className="row">
-                <div className="col-2 label-col">
-                  <label>Koszt na osobę: </label>
-                </div>
-                <div className="col">
-                  <input
-                    type="number"
-                    ref={register}
-                    name="costPerPerson"
-                    min="0"
-                    max="50"
-                  ></input>
-                </div>
-                <div className="col-1"></div>
-                <div className="col-2 label-col">
-                  <label>Czas trwania: </label>
-                </div>
-                <div className="col">
-                  <input name="duration" type="time" ref={register} />
-                </div>
-              </div>
-            </div>
-            <div className="col-2"></div>
-          </div>
-          <div className="row">
-            <div className="col-2"></div>
-            <div className="col">
-              <div className="row">
-                <div className="col-2 label-col"></div>
-                <div className="col"></div>
-                <div className="col-1"></div>
-                <div className="col-2 label-col">
+                <div className="col-4 label-col">
                   <label>Grupa: </label>
                 </div>
                 <div className="col">

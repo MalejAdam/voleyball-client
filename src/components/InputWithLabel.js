@@ -6,7 +6,7 @@ export const InputWithLabel = React.forwardRef(
   ({ inputName, textLabel, placeholder, isRequired }, ref) => {
     return (
       <>
-        <div className="col-2 label-col">
+        <div className="col-3 label-col">
           <label>{textLabel}: </label>
         </div>
         <div className="col">

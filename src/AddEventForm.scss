@@ -16,3 +16,9 @@ select {
   font-size: 14px;
   margin-bottom: 10px;
 }
+
+@media (max-width: 1000px) {
+  .empty-div {
+    display: none;
+  }
+}
