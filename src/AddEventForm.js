@@ -183,7 +183,7 @@ export const AddEventForm = () => {
             <div className="col-1"></div>
           </div>
           <div className="row submit-row">
-            <div className="col-3">
+            <div className="col-4">
               <input type="submit" value="Utwórz"></input>
             </div>
             <div className="col-1"></div>
