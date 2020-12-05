@@ -23,7 +23,7 @@ export const MainCard = () => {
     <div>
       <div className="container main-card">
         <div className="row">
-          <div className="col-2"></div>
+          <div className="col-1"></div>
           <div className="col date-column">
             <h1 className="date-header">
               Dziś jest: {getDayName().toLowerCase()},{' '}
@@ -31,7 +31,7 @@ export const MainCard = () => {
             </h1>
           </div>
 
-          <div className="col-2"></div>
+          <div className="col-1"></div>
         </div>
         <div className="row">
           <AddEventForm />
