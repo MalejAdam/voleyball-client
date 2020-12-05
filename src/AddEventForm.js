@@ -25,14 +25,14 @@ export const AddEventForm = () => {
     <>
       <div className="col">
         <div className="row">
-          <div className="col-2"></div>
+          <div className="col-1"></div>
           <div className="col" style={{ paddingLeft: '0' }}>
             <h3>Utwórz wydarzenie</h3>
           </div>
         </div>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="row">
-            <div className="col-2"></div>
+            <div className="col-1"></div>
             <div className="col">
               <div className="row">
                 <InputWithLabel
@@ -44,10 +44,10 @@ export const AddEventForm = () => {
                 />
               </div>
             </div>
-            <div className="col-2"></div>
+            <div className="col-1"></div>
           </div>
           <div className="row">
-            <div className="col-2"></div>
+            <div className="col-1"></div>
             <div className="col">
               <div className="row">
                 <div className="col-12">
@@ -68,10 +68,10 @@ export const AddEventForm = () => {
                 {/* <div className="col-1 empty-div"></div> */}
               </div>
             </div>
-            <div className="col-2"></div>
+            <div className="col-1"></div>
           </div>
           <div className="row">
-            <div className="col-2"></div>
+            <div className="col-1"></div>
             <div className="col">
               <div className="row">
                 <div className="col-12">
@@ -110,10 +110,10 @@ export const AddEventForm = () => {
                 </div>
               </div>
             </div>
-            <div className="col-2"></div>
+            <div className="col-1"></div>
           </div>
           <div className="row">
-            <div className="col-2"></div>
+            <div className="col-1"></div>
             <div className="col">
               <div className="row">
                 <div className="col-12">
@@ -144,10 +144,10 @@ export const AddEventForm = () => {
                 </div>
               </div>
             </div>
-            <div className="col-2"></div>
+            <div className="col-1"></div>
           </div>
           <div className="row">
-            <div className="col-2"></div>
+            <div className="col-1"></div>
             <div className="col">
               <div className="row">
                 <div className="col-4 label-col">
@@ -166,10 +166,10 @@ export const AddEventForm = () => {
                 </div>
               </div>
             </div>
-            <div className="col-2"></div>
+            <div className="col-1"></div>
           </div>
           <div className="row">
-            <div className="col-2"></div>
+            <div className="col-1"></div>
             <div className="col">
               <div className="row">
                 <InputWithLabel
@@ -180,13 +180,13 @@ export const AddEventForm = () => {
                 />
               </div>
             </div>
-            <div className="col-2"></div>
+            <div className="col-1"></div>
           </div>
           <div className="row submit-row">
             <div className="col-3">
               <input type="submit" value="Utwórz"></input>
             </div>
-            <div className="col-2"></div>
+            <div className="col-1"></div>
           </div>
         </form>
       </div>
