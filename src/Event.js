@@ -7,8 +7,11 @@ export const Event = ({ event }) => {
 
   return (
     <div
-      className="col event"
-      style={{ marginBottom: '20px', backgroundColor: 'white' }}
+      className="col-12 col-md-5 event"
+      style={{
+        marginBottom: '20px',
+        backgroundColor: 'white',
+      }}
     >
       <div className="row">
         <div className="col-6">
