@@ -7,17 +7,23 @@ export const Event = ({ event }) => {
 
   return (
     <div
-      className="col-10 event"
+      className="col event"
       style={{ marginBottom: '20px', backgroundColor: 'white' }}
     >
       <div className="row">
-        <div className="col-6">Data wydarzenia: {event.date}</div>
-        <div className="col-6 cost">Koszt: {event.costPerPerson}</div>
-        <div className="col-6">Gdzie gramy?: {event.address}</div>
+        <div className="col-6">
+          <label>Data wydarzenia: {event.date}</label>
+        </div>
+        <div className="col-6 cost">
+          <label>Koszt: {event.costPerPerson}</label>
+        </div>
+        <div className="col-6">
+          <label>Gdzie gramy?: {event.address}</label>
+        </div>
       </div>
       <form>
         <div className="row submit-row">
-          <div className="col-3">
+          <div className="col-5">
             <input type="button" value="Zapisz się" onClick={onsubmit}></input>
           </div>
         </div>
