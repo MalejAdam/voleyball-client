@@ -15,9 +15,15 @@ export const EventsList = () => {
 
   return (
     <>
-      {sortedEvents.map((event) => {
-        return <Event key={event.id} classname="event-list" event={event} />;
-      })}
+      <div className="col">
+        <div className="row justify-content-between">
+          {sortedEvents.map((event) => {
+            return (
+              <Event key={event.id} classname="event-list" event={event} />
+            );
+          })}
+        </div>
+      </div>
     </>
   );
 };

@@ -39,14 +39,14 @@ export const MainCard = () => {
       </div>
       <div className="container main-card">
         <div className="row">
-          <div className="col-2"></div>
+          <div className="col-1"></div>
           <div className="col">
             <div className="row event-list">
               <EventsList />
             </div>
           </div>
 
-          <div className="col-2"></div>
+          <div className="col-1"></div>
         </div>
       </div>
     </div>
