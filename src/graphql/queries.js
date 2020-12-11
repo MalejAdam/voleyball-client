@@ -9,6 +9,7 @@ export const getEventsQueries = gql`
       time
       numberOfPerson
       costPerPerson
+      willingPersons
     }
   }
 `;
