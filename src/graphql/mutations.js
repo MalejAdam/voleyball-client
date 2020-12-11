@@ -9,3 +9,12 @@ export const addEventMutation = gql`
     }
   }
 `;
+
+export const registrationForEvent = gql`
+  mutation RegistrationForEvent($input: RegisterForEventInput) {
+    registerForEvent(input: $input) {
+      id
+      willingPersons
+    }
+  }
+`;
