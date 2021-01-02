@@ -6,7 +6,6 @@ export const getEventsQueries = gql`
       id
       address
       date
-      time
       numberOfPerson
       costPerPerson
       willingPersons

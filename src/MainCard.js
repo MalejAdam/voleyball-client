@@ -30,7 +30,6 @@ export const MainCard = () => {
               {getFullDate().toLowerCase()}{' '}
             </h1>
           </div>
-
           <div className="col-1"></div>
         </div>
         <div className="row">
@@ -45,7 +44,6 @@ export const MainCard = () => {
               <EventsList />
             </div>
           </div>
-
           <div className="col-1"></div>
         </div>
       </div>

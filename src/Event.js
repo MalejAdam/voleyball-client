@@ -52,12 +52,9 @@ const onsubmit = () => {
 };
 
 const convertDate = (date) => {
-  const splitedDate = date.split('-').reverse();
-  const mappedDate = splitedDate.map((date, index) => {
-    if (index === 1) {
-      return months[parseInt(date) - 1].toLowerCase();
-    }
-    return date;
-  });
-  return mappedDate.join(' ');
+  const formatDate = new Date(date);
+  const dayNumber = formatDate.getDate();
+  const month = formatDate.getMonth();
+  const year = formatDate.getFullYear();
+  return dayNumber + ' ' + months[month].toLowerCase() + ' ' + year;
 };
