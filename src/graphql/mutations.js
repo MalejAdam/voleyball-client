@@ -5,7 +5,6 @@ export const addEventMutation = gql`
     addEvent(input: $input) {
       id
       address
-      time
     }
   }
 `;
