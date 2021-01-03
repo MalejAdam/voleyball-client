@@ -7,7 +7,11 @@ export const InputDate = React.forwardRef(({ inputName }, ref) => {
   const month = currentDate.getMonth() + 1;
   const year = currentDate.getFullYear();
   const dateInString =
-    year + '-' + (month < 10 ? '0' + month : month) + '-' + (day < 10 ? '0' + day : day);
+    year +
+    '-' +
+    (month < 10 ? '0' + month : month) +
+    '-' +
+    (day < 10 ? '0' + day : day);
 
   return (
     <>

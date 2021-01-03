@@ -137,7 +137,14 @@ export const AddEventForm = () => {
                       <label>Czas trwania: </label>
                     </div>
                     <div className="col">
-                      <input name="duration" type="time" ref={register} />
+                      <input
+                        name="duration"
+                        type="time"
+                        ref={register}
+                        min="00:00"
+                        max="05:00"
+                        defaultValue="02:00"
+                      />
                     </div>
                   </div>
                 </div>
